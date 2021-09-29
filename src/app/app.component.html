@@ -1,0 +1,42 @@
+<p>
+    <mat-toolbar color="primary">
+        <mat-icon>collections_bookmark</mat-icon>
+        <span>Livros</span>
+    </mat-toolbar>
+</p>
+<p>
+    <mat-card style="text-align: center; font-size: 20px;">
+        <mat-label>Cadastrar Livro</mat-label>
+    </mat-card>
+    <mat-card style="text-align: center;">
+        <mat-form-field class="example-full-width" appearance="fill"
+            style="margin-right: 20px;">
+            <mat-label>Nome do Livro</mat-label>
+            <input matInput id="username" name="username" #username>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill"
+            style="margin-right: 20px;">
+            <mat-label>Autor</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill"
+            style="margin-right: 20px;">
+            <mat-label>Editora</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill"
+            style="margin-right: 20px;">
+            <mat-label>Preço</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <section>
+            <button mat-flat-button color="primary" (click)="clicou()">Cadastrar</button>
+        </section>
+    </mat-card>
+    <mat-card style="text-align: center; font-size: 20px;">
+        <mat-label>Listar</mat-label>
+    </mat-card>
+    <mat-card style="text-align: center;">
+       LOCAL DA TABELA
+    </mat-card>
+</p>
