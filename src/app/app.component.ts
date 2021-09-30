@@ -41,11 +41,9 @@ export class AppComponent implements OnInit{
       preco: this.preco
     };
 
-    console.log(livro);
-
     this.service.create(livro).subscribe(livro => {
-      console.log(livro);
-    });
+      window.location.reload();
+    })
 
   }
 }
