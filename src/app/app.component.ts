@@ -1,7 +1,7 @@
 import { LivroService } from './services/livro.service';
 import { Component, OnInit } from '@angular/core';
 import { Livro } from './models/livro';
-
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -24,8 +24,28 @@ export class AppComponent implements OnInit{
   }
 
   username: string = '';
+  autor: string = '';
+  editora: string = '';
+  preco: number = 0;
 
-  clicou = () => {
+  clicou(): void {
     this.username = (<HTMLInputElement>document.getElementById("username")).value;
+    this.autor = (<HTMLInputElement>document.getElementById("autor")).value;
+    this.editora = (<HTMLInputElement>document.getElementById("editora")).value;
+    this.preco = Number((<HTMLInputElement>document.getElementById("preco")).value);
+
+    var livro: Livro = {
+      nome: this.username,
+      autor: this.autor,
+      editora: this.editora,
+      preco: this.preco
+    };
+
+    console.log(livro);
+
+    this.service.create(livro).subscribe(livro => {
+      console.log(livro);
+    });
+
   }
 }
