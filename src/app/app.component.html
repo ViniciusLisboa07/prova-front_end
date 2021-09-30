@@ -37,6 +37,19 @@
         <mat-label>Listar</mat-label>
     </mat-card>
     <mat-card style="text-align: center;">
-       LOCAL DA TABELA
+        <table id="customers">
+            <TR>
+              <TH>ID</TH>
+              <TH>Nome</TH>
+              <TH>Autor</TH>
+              <TH>Preço</TH>
+            </TR>
+            <TR *ngFor="let livro of livros">
+              <TD>{{ livro.id }}</TD>
+              <TD>{{ livro.nome }}</TD>
+              <TD>{{ livro.autor }}</TD>
+              <TD>R$: {{ livro.preco }}</TD>
+            </TR>
+          </table>
     </mat-card>
 </p>
